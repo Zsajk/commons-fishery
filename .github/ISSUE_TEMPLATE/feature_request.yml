@@ -1,0 +1,39 @@
+name: Feature request
+description: Suggest a session, interface, or mechanics improvement.
+title: "[Feature]: "
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Participant experience
+        - Facilitator workflow
+        - Game mechanics
+        - Results and analysis
+        - Deployment
+        - Documentation
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Session problem
+      description: What is difficult, unclear, or currently impossible?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+  - type: textarea
+    id: learning
+    attributes:
+      label: Learning effect
+      description: How would this change affect participant choices or interpretation?
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered

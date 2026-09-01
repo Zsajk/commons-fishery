@@ -1,0 +1,66 @@
+{
+  "name": "commons-fishery",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A browser-based multiplayer variant of the Tragedy of the Commons fishing game for teaching, demonstrations, experiments, and facilitated play.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20 <25"
+  },
+  "scripts": {
+    "dev": "tsx server/index.ts",
+    "build": "tsc --noEmit && vite build",
+    "check": "tsc --noEmit",
+    "test": "vitest run",
+    "smoke:public": "node scripts/smoke-public-multiplayer.mjs",
+    "smoke:workshop": "node scripts/smoke-workshop-load.mjs",
+    "start": "NODE_ENV=production tsx server/index.ts",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@zxing/browser": "^0.1.5",
+    "cookie": "^1.1.1",
+    "dotenv": "^17.4.2",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.6.2",
+    "jose": "^6.2.10",
+    "lucide-react": "^0.525.0",
+    "pg": "^8.22.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.7.1",
+    "tsx": "^4.20.3",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.1.0",
+    "@types/pg": "^8.20.0",
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "@types/ws": "^8.18.1",
+    "@vitejs/plugin-react": "^4.7.0",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.6",
+    "vitest": "^3.2.4"
+  },
+  "author": "Commons Fishery contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zsajk/commons-fishery.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Zsajk/commons-fishery/issues"
+  },
+  "keywords": [
+    "tragedy-of-the-commons",
+    "participatory-simulation",
+    "workshop",
+    "education",
+    "websocket"
+  ]
+}

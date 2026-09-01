@@ -1,0 +1,12 @@
+node_modules
+dist
+.data
+.git
+.vercel
+.env
+.env.*
+!.env.aws.example
+*.log
+.DS_Store
+docs
+tests

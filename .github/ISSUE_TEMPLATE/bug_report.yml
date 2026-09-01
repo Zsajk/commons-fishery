@@ -1,0 +1,59 @@
+name: Bug report
+description: Report reproducible behavior that is incorrect or blocks a session.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: Do not include facilitator PINs, session secrets, private keys, or participant data.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Participant view
+        - Facilitator view
+        - Game mechanics
+        - Real-time connection
+        - Deployment
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: v0.1.0 or a commit SHA
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and deployment
+      placeholder: Safari on iPhone, Docker on Ubuntu 24.04
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Use a test game and pseudonyms.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or safe logs
+      description: Remove credentials and participant information before attaching anything.

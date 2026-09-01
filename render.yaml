@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: commons-fishery
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: DATABASE_URL
+        fromDatabase:
+          name: commons-fishery-db
+          property: connectionString
+      - key: FACILITATOR_PIN
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+
+databases:
+  - name: commons-fishery-db
+    plan: free
+    region: frankfurt
+    databaseName: common_waters
+    user: common_waters
